@@ -59,7 +59,7 @@ class UserController extends Controller {
 			return 0;
 		}
 	}
-	
+	 
 	// 删除用户，实际上软删除
 	public function deleteUser($id) {
 		$model = M ( 'user' );
