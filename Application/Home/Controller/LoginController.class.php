@@ -38,15 +38,26 @@ class LoginController extends Controller {
 		return 0;
 	}
 	
-	//处理登出
-	public function logout_handle($id){
-		//echo "logout page";		
-		if(session('id')==$id){
-			session('id',null);
+	// 处理登出
+	public function logout_handle($id) {
+		// echo "logout page";
+		if (session ( 'id' ) == $id) {
+			session ( 'id', null );
 			return 1;
-		}else{
-			//echo "logout page error";
+		} else {
+			// echo "logout page error";
 			return 0;
+		}
+	}
+	
+	// android登录
+	public function login_android(){
+		$name=I($_POST['name']);
+		$password=I($_POST['password']);
+		if($this->login_handle($name, $password)){
+			$this->ajaxReturn(1);
+		}else{
+			$this->ajaxReturn(-1);
 		}
 	}
 }
