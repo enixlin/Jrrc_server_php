@@ -12,6 +12,8 @@ use Think\Controller;
  */
 class UserController extends Controller {
 	
+	
+	
 	// 增加用户,成功返回1，失败返回0
 	public function addUser($name, $password) {
 		$model = M ( 'user' );
