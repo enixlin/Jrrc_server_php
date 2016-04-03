@@ -37,7 +37,7 @@ class LoginController extends Controller {
 		}
 		return 0;
 	}
-	
+	 
 	// 处理登出
 	public function logout_handle($id) {
 		// echo "logout page";
